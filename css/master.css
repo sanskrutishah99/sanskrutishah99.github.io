@@ -1,25 +1,24 @@
 /* ================================
    Master CSS File 
    ================================
-   - Uses a refined color palette
-   - Applies global styles for a clean, modern look
-   - Responsive design for mobile & tablet users
-   - Includes buttons, typography, and hover effects
+   - Uses a fun, high-contrast color palette
+   - Applies global styles for a creative look
+   - Includes hover effects & animations
+   - Responsive design for all devices
    ================================ */
 
 /* Root Variables for Easy Theme Management */
 :root {
-    --warm-gray: #A8A29E;
-    --midnight-blue: #2C3E50;
-    --soft-beige: #F5EDE3;
-    --teal: #007D75;
-    --electric-coral: #FF4F5A;
+    --cyan: #00FFFF;
+    --magenta: #FF00FF;
+    --yellow: #FFD700;
+    --black: #222222;
 
-    --text-color: var(--midnight-blue);
-    --background-color: var(--soft-beige);
-    --primary-color: var(--teal);
-    --accent-color: var(--electric-coral);
-    --font-family: "Arial", sans-serif;
+    --text-color: var(--black);
+    --background-color: var(--cyan);
+    --accent-color: var(--magenta);
+    --highlight-color: var(--yellow);
+    --font-family: "Poppins", sans-serif;
 }
 
 /* Normalize Styles */
@@ -35,6 +34,7 @@ body {
     color: var(--text-color);
     background: var(--background-color);
     line-height: 1.6;
+    transition: background 0.5s ease;
 }
 
 /* Container */
@@ -47,7 +47,7 @@ body {
 
 /* Navigation Bar */
 nav {
-    background: var(--midnight-blue);
+    background: var(--black);
     padding: 15px 0;
 }
 
@@ -63,30 +63,32 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--soft-beige);
+    color: var(--cyan);
     font-weight: bold;
     font-size: 1.1rem;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: var(--electric-coral);
+    color: var(--highlight-color);
 }
 
 /* Headings & Text */
 h1, h2, h3 {
     color: var(--text-color);
+    text-align: center;
 }
 
 h1 {
     font-size: 2.5rem;
-    text-align: center;
     margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 p {
     font-size: 1.1rem;
-    color: var(--warm-gray);
+    color: var(--black);
     text-align: center;
 }
 
@@ -94,17 +96,19 @@ p {
 .button {
     display: inline-block;
     padding: 12px 20px;
-    background: var(--primary-color);
+    background: var(--magenta);
     color: #fff;
     font-size: 1rem;
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
 }
 
 .button:hover {
-    background: var(--accent-color);
+    background: var(--highlight-color);
     transform: scale(1.05);
+    color: var(--black);
 }
 
 /* Card / Content Box */
@@ -115,18 +119,42 @@ p {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: 20px 0;
     text-align: center;
+    border-left: 8px solid var(--magenta);
 }
 
 .card h2 {
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background: var(--midnight-blue);
-    color: var(--soft-beige);
+    background: var(--black);
+    color: var(--cyan);
+}
+
+/* Cool Hover Effect for Links */
+a {
+    position: relative;
+    text-decoration: none;
+    color: var(--black);
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: var(--magenta);
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+a:hover::after {
+    transform: scaleX(1);
 }
 
 /* Responsive Design */
