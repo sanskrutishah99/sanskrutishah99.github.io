@@ -1,7 +1,7 @@
 /* ================================
    Master CSS File 
    ================================
-   - Uses an elegant & modern color palette
+   - Uses an elegant, nature-inspired color palette
    - Clean typography & spacing
    - Styled navigation, sections, and buttons
    - Responsive design for all devices
@@ -9,16 +9,17 @@
 
 /* Root Variables for Easy Theme Management */
 :root {
-    --warm-gray: #A8A29E;
-    --midnight-blue: #2C3E50;
-    --soft-beige: #F5EDE3;
-    --teal: #007D75;
-    --electric-coral: #FF4F5A;
+    --warm-taupe: #A08C75;
+    --deep-navy: #1C3D5A;
+    --muted-sage: #A7C4A0;
+    --soft-ivory: #F6F1EB;
+    --amber-gold: #ECA400;
 
-    --text-color: var(--midnight-blue);
-    --background-color: var(--soft-beige);
-    --primary-color: var(--teal);
-    --accent-color: var(--electric-coral);
+    --text-color: var(--deep-navy);
+    --background-color: var(--soft-ivory);
+    --primary-color: var(--muted-sage);
+    --accent-color: var(--amber-gold);
+    --secondary-color: var(--warm-taupe);
     --font-family: "Poppins", sans-serif;
 }
 
@@ -46,25 +47,25 @@ body {
 
 /* Header */
 header {
-    background: var(--midnight-blue);
-    color: var(--soft-beige);
+    background: var(--deep-navy);
+    color: var(--soft-ivory);
     text-align: center;
-    padding: 40px 20px;
+    padding: 50px 20px;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 10px;
 }
 
 .subtitle {
-    font-size: 1.2rem;
-    opacity: 0.8;
+    font-size: 1.3rem;
+    opacity: 0.9;
 }
 
 /* Navigation */
 nav {
-    background: var(--teal);
+    background: var(--muted-sage);
     padding: 15px 0;
     text-align: center;
 }
@@ -81,30 +82,30 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--soft-beige);
+    color: var(--deep-navy);
     font-weight: bold;
     font-size: 1.1rem;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: var(--electric-coral);
+    color: var(--amber-gold);
 }
 
 /* Sections */
 section {
     text-align: center;
     margin: 40px 0;
-    padding: 20px;
+    padding: 30px;
     background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--primary-color);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 p {
@@ -115,18 +116,21 @@ p {
 /* Buttons */
 .button {
     display: inline-block;
-    padding: 12px 20px;
+    padding: 12px 25px;
     background: var(--accent-color);
-    color: #fff;
+    color: var(--deep-navy);
     font-size: 1rem;
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s ease, transform 0.2s ease;
     font-weight: bold;
+    border: 2px solid var(--accent-color);
 }
 
 .button:hover {
-    background: var(--warm-gray);
+    background: var(--warm-taupe);
+    color: #fff;
+    border-color: var(--warm-taupe);
     transform: scale(1.05);
 }
 
@@ -134,8 +138,8 @@ p {
 footer {
     text-align: center;
     padding: 20px;
-    background: var(--midnight-blue);
-    color: var(--soft-beige);
+    background: var(--deep-navy);
+    color: var(--soft-ivory);
 }
 
 footer p {
